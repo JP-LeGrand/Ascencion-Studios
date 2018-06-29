@@ -1,0 +1,13 @@
+﻿.jumbotron {
+    background-image:url(../Img/L.jpg);
+    background-repeat:no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    color:white;
+}
+
+.centered{
+    margin-top:150px;
+}

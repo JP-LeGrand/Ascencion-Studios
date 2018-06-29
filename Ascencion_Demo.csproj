@@ -1,0 +1,698 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{C210D7D8-C85D-40D4-905E-DF43FE086AA7}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>ConsoleApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>Ascencion_Demo</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitattributes" />
+    <None Include=".gitignore" />
+    <None Include=".git\COMMIT_EDITMSG" />
+    <None Include=".git\config" />
+    <None Include=".git\description" />
+    <None Include=".git\HEAD" />
+    <None Include=".git\hooks\applypatch-msg.sample" />
+    <None Include=".git\hooks\commit-msg.sample" />
+    <None Include=".git\hooks\fsmonitor-watchman.sample" />
+    <None Include=".git\hooks\post-update.sample" />
+    <None Include=".git\hooks\pre-applypatch.sample" />
+    <None Include=".git\hooks\pre-commit.sample" />
+    <None Include=".git\hooks\pre-push.sample" />
+    <None Include=".git\hooks\pre-rebase.sample" />
+    <None Include=".git\hooks\pre-receive.sample" />
+    <None Include=".git\hooks\prepare-commit-msg.sample" />
+    <None Include=".git\hooks\update.sample" />
+    <None Include=".git\index" />
+    <None Include=".git\info\exclude" />
+    <None Include=".git\logs\HEAD" />
+    <None Include=".git\logs\refs\heads\master" />
+    <None Include=".git\objects\02\68cb153f3c2993d78285d445cedf55f4a53641" />
+    <None Include=".git\objects\02\690cdc9f89835be6c83b6ed2919d7adfda06e1" />
+    <None Include=".git\objects\05\1c8b43960d61028d44bdfd61afe2e3fe4d9f04" />
+    <None Include=".git\objects\07\43e1592dfbdf7b288c03cfb133fec243682f52" />
+    <None Include=".git\objects\0b\440382f61f0bb1683e5b15c2a00e4e398f9980" />
+    <None Include=".git\objects\0d\f8fde8c18bc38a36b7e9e9f7ba179164d41407" />
+    <None Include=".git\objects\0e\846b780dfbda26b0471e7d187e345773903317" />
+    <None Include=".git\objects\0f\e1827d5d6520bd7dd13c5e21b22686af1a24e8" />
+    <None Include=".git\objects\11\0289f2f4b5260ce04dd035408961f1e4f2785b" />
+    <None Include=".git\objects\11\c188196d5ade55930b7b94fc5a1dd0f6d1a800" />
+    <None Include=".git\objects\15\187ebe9e36a7f1f31d21f9fe3b7aa89c26c45c" />
+    <None Include=".git\objects\15\9d600425c73c282be34f94af12179f091a16d2" />
+    <None Include=".git\objects\19\07d9ff67a77fdadf741457ad3d85572002f633" />
+    <None Include=".git\objects\1a\c247b2273ab0266242c1fe030e8dd30a59a871" />
+    <None Include=".git\objects\1c\82615918f73e322fb3c1ab7896f98a0d680dde" />
+    <None Include=".git\objects\1f\3d6c46f69dfe11869db3421cac9579edb6bd0d" />
+    <None Include=".git\objects\1f\f0c423042b46cb1d617b81efb715defbe8054d" />
+    <None Include=".git\objects\21\757aeafbc669e96a89214af8c01e09f9ce04d1" />
+    <None Include=".git\objects\22\adfc1bd3406f9cf6c999ce21b7f1812c670578" />
+    <None Include=".git\objects\24\068d3b46bdf560ffb54eec2c6fd9ee81f5da05" />
+    <None Include=".git\objects\24\c2992c5bebcceedf2049a1e6144df590a69376" />
+    <None Include=".git\objects\28\d6241c555c66e911b157dc02f3f049d5148d2c" />
+    <None Include=".git\objects\29\4ee966c8b135ea3e299b7ca49c450e78870b59" />
+    <None Include=".git\objects\29\cbb083eb8a5244c0d86db8d9d4b7402676c188" />
+    <None Include=".git\objects\2c\d1b992543f5d57e13d358d5877519406b7375f" />
+    <None Include=".git\objects\2e\dd71b16766c4fc8fbf476e8dd2b08f4cf5b0f8" />
+    <None Include=".git\objects\2f\dd16da179b6533415f420c6c1f1a7878c44d23" />
+    <None Include=".git\objects\30\4edfef1559731a26f2c0adad99e07883548a47" />
+    <None Include=".git\objects\32\ac4e72c37ceb26c79c29279e0fcaeeafb1c09e" />
+    <None Include=".git\objects\33\4d09234692c50ea1a9443082ddccf870112704" />
+    <None Include=".git\objects\35\acda2fa1196aad98c2adf4378a7611dd713aa3" />
+    <None Include=".git\objects\35\d96354d777b36b665291f4c7d908272cb9e888" />
+    <None Include=".git\objects\3b\0862707b2bce677bde7819960174c6a49aad48" />
+    <None Include=".git\objects\3b\e2525befe357a00417b74444bf9ea4a224c4b8" />
+    <None Include=".git\objects\3c\4efe206bd0e7230ad0ae8396a3c883c8207906" />
+    <None Include=".git\objects\3e\b06e812251c0fd850551e70258e6c8a201c071" />
+    <None Include=".git\objects\3f\4f1a877ad64d737323af37f5dd43b9a99d1d6c" />
+    <None Include=".git\objects\40\0014a4b06eee3d0c0d54402a47ab2601b2862b" />
+    <None Include=".git\objects\40\1ec0f36e4f73b8efa40bd6f604fe80d286db70" />
+    <None Include=".git\objects\41\0bbc6e4e96b77360e9c4f565c45870449bb528" />
+    <None Include=".git\objects\41\341db0948c692c270b137f9bf3dcf170e7b1a9" />
+    <None Include=".git\objects\41\e9a8184aa287c5970cc8415e3c5a6310dc9f79" />
+    <None Include=".git\objects\44\23f839062c19e6d189a7c1bd3874af77a60fc2" />
+    <None Include=".git\objects\44\692cc902078585121655d9590d3312cbe50cd5" />
+    <None Include=".git\objects\47\f52499243f5b2b75c1ff2ab454cc39fe6f1dff" />
+    <None Include=".git\objects\49\8fc4a087c614614166df2e9f08bb5e0071daf4" />
+    <None Include=".git\objects\4a\bf6c9fb78f0d1ce1e5a28af98c7df5fb239abe" />
+    <None Include=".git\objects\4d\13fc60404b91e398a37200c4a77b645cfd9586" />
+    <None Include=".git\objects\4d\9b3a258759c53e7bc66b6fc554c51e2434437c" />
+    <None Include=".git\objects\52\3a941e14c65fecbf834357c2cb24754495521d" />
+    <None Include=".git\objects\54\0440ce89f2a408aa699b65100e18f15e0f09ca" />
+    <None Include=".git\objects\54\4ef0e05e9f79ae7c3e92810c62dd610ebe66eb" />
+    <None Include=".git\objects\54\afe69e4dbafff9a5a056d9bc5432049a7e604e" />
+    <None Include=".git\objects\58\1877acf608210d51a0b28ccb1503897b951c24" />
+    <None Include=".git\objects\59\1107ca050ee9be49e3b6312339d519e18083df" />
+    <None Include=".git\objects\5b\33ee4c909065e7819c2c79f6d2540c53d3e9df" />
+    <None Include=".git\objects\5d\ae0ed4ec38009438bfd418623b5d50a04c3729" />
+    <None Include=".git\objects\60\763a8640f1c7e3d2f839d41775806a2ad2caa7" />
+    <None Include=".git\objects\61\6eec68ce5c712596aaef12a45f8266727b4fc8" />
+    <None Include=".git\objects\61\9d762b677c5b8ed6b692552d970e20753f03bd" />
+    <None Include=".git\objects\63\7426f0da6dcef3602d764d9e359dabb4a5a862" />
+    <None Include=".git\objects\66\ad52a5ba052ced428dcc7ec7016bc25438a2ca" />
+    <None Include=".git\objects\67\647fb714b0cfd4c38a6dec2ef4bb0cb2b55cb3" />
+    <None Include=".git\objects\6b\1d0f6c251c70832bcf366c5a94d19e9dfd3e57" />
+    <None Include=".git\objects\6b\e182278f0778c669c75b382524a27abd772f41" />
+    <None Include=".git\objects\6e\91590d1fd897796ac32748bdedb9c35b782e05" />
+    <None Include=".git\objects\6e\e3a3bd5b52860ea3e99fdf8633ad683943245e" />
+    <None Include=".git\objects\6e\fb0906253c2b10c582c502c353cf1415c35315" />
+    <None Include=".git\objects\71\3196fcf0c41fe7ca3f418d86c64daf7528875e" />
+    <None Include=".git\objects\72\1acdb78e26cf746a5d80970e7d8e621a9189bc" />
+    <None Include=".git\objects\73\3e682754f462e2155af588c92cc58ef2b56ac9" />
+    <None Include=".git\objects\73\e339e16b45039385fb52311c1249a9be8b0374" />
+    <None Include=".git\objects\73\f48f0c50bbf2d44297d86e19e32c66ad869715" />
+    <None Include=".git\objects\74\25ef85fc80ce6b035065906fc27490715e3733" />
+    <None Include=".git\objects\77\3238e0467c197d2c99e9f25cd9a59a17c55d8c" />
+    <None Include=".git\objects\78\730e727d02c7d63aa830ce5b199c58655881c6" />
+    <None Include=".git\objects\78\9ce99958adac283e3d7cb0672cc38931e7df2f" />
+    <None Include=".git\objects\79\8aa2ecdf79259d9597aa06c1de1f2c98b1074f" />
+    <None Include=".git\objects\7a\65340f051367de329e683aa7b20d6942a4b137" />
+    <None Include=".git\objects\7a\ebd0ffad6cf2c2f1813b1124d32610343db331" />
+    <None Include=".git\objects\7d\1e4d54d6c293333eb638aa56feba7b62e15564" />
+    <None Include=".git\objects\7d\43e1f10728f6248427c9843063be9e47a0f177" />
+    <None Include=".git\objects\7d\dbbc0115f5b017bae9f401651f00d824a396b2" />
+    <None Include=".git\objects\7f\9236b5df14bef610b1d8d8e8202ba77031edae" />
+    <None Include=".git\objects\80\2914dbfa90ec3b252cea656be97c76d5d1b02a" />
+    <None Include=".git\objects\81\13cae7f50f91510eb9c51fda135a0410b12e3f" />
+    <None Include=".git\objects\82\243f238e6ec57c1020254de257a09f01ea3b8b" />
+    <None Include=".git\objects\83\5be41f8151b6439f799be29ec7921af1b72593" />
+    <None Include=".git\objects\85\5c845e538b65548118279537a04eab2ec6ef0d" />
+    <None Include=".git\objects\85\61e181adf05fbc285c993cb4664872cd11453f" />
+    <None Include=".git\objects\87\6720048c29a61449cdbe6e236967524757a17d" />
+    <None Include=".git\objects\8a\020dbfff7822bf57c7217eafdaa4884b8aa943" />
+    <None Include=".git\objects\8c\93ba2e8cb611601366264bb56b902a013a229a" />
+    <None Include=".git\objects\8d\2c92de9234443ffe525b02d7c863e8eb673bcb" />
+    <None Include=".git\objects\8d\65681fb4e9f2108a55d50fc3ec332ddf549040" />
+    <None Include=".git\objects\8e\a7708790e861c6570468d949c8e1a2ec605940" />
+    <None Include=".git\objects\8f\982233ae7cc8fbcb2066f142614d05d63d8bf3" />
+    <None Include=".git\objects\91\e3470e1645e6e8d0de6fe9f6b242f366e9a393" />
+    <None Include=".git\objects\92\7b3c1f8065e5bf49cc61598323fd0bc983ab1d" />
+    <None Include=".git\objects\93\d71db78e968488d494309b25c95b645fa9b03e" />
+    <None Include=".git\objects\95\3b79f6db0bc654065e6e559e5cdeebd70082c2" />
+    <None Include=".git\objects\95\94e769e094aea2784aeff0c17996afa0787761" />
+    <None Include=".git\objects\97\1d953ee7bcab5ee227958f3ef315e7d3025e95" />
+    <None Include=".git\objects\98\b70e8d73790f5622dbc1c04ff8dbb1679c94d4" />
+    <None Include=".git\objects\9a\c0adb6a0998b70547a286b5b6645804e40c905" />
+    <None Include=".git\objects\9b\5206bcc60781905d111863bdb6232d90490f33" />
+    <None Include=".git\objects\9b\e6c5ea2b664acd57b5edbecd16c0af853a4ea6" />
+    <None Include=".git\objects\9f\8febb3e471f8b13fbb7095f8f3b0f057a1d789" />
+    <None Include=".git\objects\a2\75675ccb483ed9a21860f549939291fdcaf7b2" />
+    <None Include=".git\objects\a3\558fd09ca7cb968166d5445f4df1a0bc2d5a7e" />
+    <None Include=".git\objects\a4\5967436bc65a3de5a9d205728f3b4153e96cb3" />
+    <None Include=".git\objects\a5\29d883c76f026420aed8dbcbd4c245ed9a7c0b" />
+    <None Include=".git\objects\a7\b220f5fdcb8ba7391732769deb44b958f5e9b4" />
+    <None Include=".git\objects\a9\fd0581458e30b88284d9d6527abbe76f6f9584" />
+    <None Include=".git\objects\aa\5a5b2ab54980774aae43062a2980e0f09aabdc" />
+    <None Include=".git\objects\ac\0c972e52b852a74ac329d732c6753e097d227f" />
+    <None Include=".git\objects\ac\58fa7d49fbb735ff571eb876b4d81df952af3b" />
+    <None Include=".git\objects\ad\b34007384002b5fc2cfbccc5ff989411e58cf4" />
+    <None Include=".git\objects\ae\5ac1ddba53a589d7af0c2a52cfc7723475d6e3" />
+    <None Include=".git\objects\ae\f7403660c9a2ccc02a264c62c6b105f7d8d532" />
+    <None Include=".git\objects\b2\21c98133a4d4a8449c848ccb69bf631d1c3e5d" />
+    <None Include=".git\objects\b5\68af56c15cd7e3ea4d8fbd76158632c68f96a9" />
+    <None Include=".git\objects\b7\7d992e57ee39b63f9d69035b385840480d09c4" />
+    <None Include=".git\objects\ba\79b3828a0433dadcde16334aea52f56679dbff" />
+    <None Include=".git\objects\bb\457c23a8e4e0688ebd9383e34ab9f2b3acecab" />
+    <None Include=".git\objects\bc\d4f33466188a7fc32225003965a46c6564af7a" />
+    <None Include=".git\objects\be\ef231d0e176a47375d93fb7365270eea52f7b4" />
+    <None Include=".git\objects\bf\326e1b311ecc2eef69bab9a695fbac2410080a" />
+    <None Include=".git\objects\bf\c1b4432f0cb993ad81dfdb507136077b93178a" />
+    <None Include=".git\objects\c3\677def3131af54af2a87d9cd2bb737a321e97e" />
+    <None Include=".git\objects\c3\bbd5745d35bebda3e16ce18aeff7a4a0ce5ae1" />
+    <None Include=".git\objects\c5\157b7b7772d667c3317a71da5e0075babc966a" />
+    <None Include=".git\objects\c5\77ac84a6a55ef39ff7f4e25d60c3977a902ed1" />
+    <None Include=".git\objects\c9\d646770e2186c73632cbe042d82d1d1acaa25b" />
+    <None Include=".git\objects\cc\d8409d41b68e66b38e5ac6ee88249dfcf5b0bd" />
+    <None Include=".git\objects\cd\166ee3b1a72eb537243aa63d8ba9f1fcabb226" />
+    <None Include=".git\objects\cd\87077058a73a025a34c0b80f966de50bdb371f" />
+    <None Include=".git\objects\ce\5988fa6473befb5ab3189d2462b1364d4eda28" />
+    <None Include=".git\objects\ce\e7eb7dd0d2c22ca5942e7215837659cad7ee15" />
+    <None Include=".git\objects\d1\3fd196eae9f59ed43b514426cb526ede466126" />
+    <None Include=".git\objects\d2\91039eb7aa18baa52c92968a931d7762ee225e" />
+    <None Include=".git\objects\d4\b85a02f24adad8890ad69f7a1db6c7e3ec8a7d" />
+    <None Include=".git\objects\d5\cf585080878d885f8e05846f05c153ade54237" />
+    <None Include=".git\objects\d8\c8f83725d1e2a4007cccdff10618664ca6fbe6" />
+    <None Include=".git\objects\da\1e006c7283aaec4bd1b3c9e4246f701523ae57" />
+    <None Include=".git\objects\da\6e960b8d1e55c546e22c9868460f3b2c2027a0" />
+    <None Include=".git\objects\dd\0efa895edfc20b33a78154520aa9985ea04c46" />
+    <None Include=".git\objects\e3\ef608bc2bfe4b2e395f2bc9c93b8caaefa45a7" />
+    <None Include=".git\objects\e4\4980e5dcd940edf1b9dea1659ecc691578de94" />
+    <None Include=".git\objects\e5\4bd8aefc17986d686ee9e379ea6efcf6b547bd" />
+    <None Include=".git\objects\e6\3e702c4d9c28fb78922cefa5daf91858b12c9a" />
+    <None Include=".git\objects\e8\687385a04ffb087d7da436c3658c3e7aafea7e" />
+    <None Include=".git\objects\e9\f60ca953f93e35eab4108bd414bc02ddcf3928" />
+    <None Include=".git\objects\eb\2f19b756acef93a79f367b53d89af4d6cdc991" />
+    <None Include=".git\objects\eb\5bd966046ec14d746196c77fa34107da07dd44" />
+    <None Include=".git\objects\ee\906a8196d0fbd581c27a9d5615db4c250860f2" />
+    <None Include=".git\objects\ef\e09be461debd0c20f5d100c0b0c949dc9ebf23" />
+    <None Include=".git\objects\f1\c83aaa5d24da542d81b09677307f47f374401e" />
+    <None Include=".git\objects\f1\c8ad75f52bbc6c84a6dc3a341fe39e8d3edfd4" />
+    <None Include=".git\objects\f4\ca9b24ba13e964450fef6135b85e47cf109aa0" />
+    <None Include=".git\objects\f6\ba81475b92355723f0dc12767f715995a34162" />
+    <None Include=".git\objects\f7\a5787f724f9fcf5308751d0cb8a2f7edc7fbc7" />
+    <None Include=".git\objects\fa\e9cfefa971636038d95909bb4fd0715b672af7" />
+    <None Include=".git\objects\fb\b941d071f6b345cbcf8509afed5ad0e70f6e37" />
+    <None Include=".git\objects\fc\53fb0e7ab49594e1eac97208c32a290558efeb" />
+    <None Include=".git\objects\fc\a3169e0c54de89b5c98b27068139d366ee4e55" />
+    <None Include=".git\objects\fd\865ec4ce5d0161aa1800bc9af3053752818f54" />
+    <None Include=".git\refs\heads\master" />
+    <None Include=".vs\Ascencion _Studios_Demo\DesignTimeBuild\.dtbcache" />
+    <None Include=".vs\Ascencion _Studios_Demo\v15\.suo" />
+    <None Include=".vs\Ascencion _Studios_Demo\v15\Server\sqlite3\db.lock" />
+    <None Include=".vs\Ascencion _Studios_Demo\v15\Server\sqlite3\storage.ide" />
+    <None Include=".vs\Ascencion _Studios_Demo\v15\Server\sqlite3\storage.ide-shm" />
+    <None Include=".vs\Ascencion _Studios_Demo\v15\Server\sqlite3\storage.ide-wal" />
+    <None Include=".vs\config\applicationhost.config" />
+    <None Include="app.config" />
+    <None Include="Ascencion _Studios_Demo\bin\Ascencion _Studios_Demo.dll.config" />
+    <None Include="Ascencion _Studios_Demo\bin\roslyn\csc.exe.config" />
+    <None Include="Ascencion _Studios_Demo\bin\roslyn\csc.rsp" />
+    <None Include="Ascencion _Studios_Demo\bin\roslyn\csi.exe.config" />
+    <None Include="Ascencion _Studios_Demo\bin\roslyn\csi.rsp" />
+    <None Include="Ascencion _Studios_Demo\bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <None Include="Ascencion _Studios_Demo\bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <None Include="Ascencion _Studios_Demo\bin\roslyn\vbc.exe.config" />
+    <None Include="Ascencion _Studios_Demo\bin\roslyn\vbc.rsp" />
+    <None Include="Ascencion _Studios_Demo\bin\roslyn\VBCSCompiler.exe.config" />
+    <None Include="Ascencion _Studios_Demo\fonts\iconic\fonts\Material-Design-Iconic-Font.eot" />
+    <None Include="Ascencion _Studios_Demo\fonts\iconic\fonts\Material-Design-Iconic-Font.ttf" />
+    <None Include="Ascencion _Studios_Demo\fonts\iconic\fonts\Material-Design-Iconic-Font.woff" />
+    <None Include="Ascencion _Studios_Demo\fonts\iconic\fonts\Material-Design-Iconic-Font.woff2" />
+    <None Include="Ascencion _Studios_Demo\obj\Debug\Ascencion _Studios_Demo.csproj.CopyComplete" />
+    <None Include="Ascencion _Studios_Demo\obj\Debug\Ascencion _Studios_Demo.csproj.CoreCompileInputs.cache" />
+    <None Include="Ascencion _Studios_Demo\obj\Debug\Ascencion _Studios_Demo.csprojAssemblyReference.cache" />
+    <None Include="Ascencion _Studios_Demo\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="Ascencion _Studios_Demo\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Ascencion _Studios_Demo\packages.config" />
+    <None Include="Ascencion _Studios_Demo\scss\creative.scss" />
+    <None Include="Ascencion _Studios_Demo\scss\_bootstrap-overrides.scss" />
+    <None Include="Ascencion _Studios_Demo\scss\_global.scss" />
+    <None Include="Ascencion _Studios_Demo\scss\_masthead.scss" />
+    <None Include="Ascencion _Studios_Demo\scss\_mixins.scss" />
+    <None Include="Ascencion _Studios_Demo\scss\_navbar.scss" />
+    <None Include="Ascencion _Studios_Demo\scss\_portfolio.scss" />
+    <None Include="Ascencion _Studios_Demo\scss\_services.scss" />
+    <None Include="Ascencion _Studios_Demo\scss\_variables.scss" />
+    <None Include="Ascencion _Studios_Demo\vendor\bootstrap\css\bootstrap.css.map" />
+    <None Include="Ascencion _Studios_Demo\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <None Include="Ascencion _Studios_Demo\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <None Include="Ascencion _Studios_Demo\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <None Include="Ascencion _Studios_Demo\vendor\bootstrap\js\bootstrap.js.map" />
+    <None Include="Ascencion _Studios_Demo\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <None Include="Ascencion _Studios_Demo\vendor\font-awesome\css\font-awesome.css.map" />
+    <None Include="Ascencion _Studios_Demo\vendor\font-awesome\fonts\fontawesome-webfont.eot" />
+    <None Include="Ascencion _Studios_Demo\vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <None Include="Ascencion _Studios_Demo\vendor\font-awesome\fonts\fontawesome-webfont.woff" />
+    <None Include="Ascencion _Studios_Demo\vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <None Include="Ascencion _Studios_Demo\vendor\font-awesome\fonts\FontAwesome.otf" />
+    <None Include="Ascencion _Studios_Demo\vendor\font-awesome\less\animated.less" />
+    <None Include="Ascencion _Studios_Demo\vendor\font-awesome\less\bordered-pulled.less" />
+    <None Include="Ascencion _Studios_Demo\vendor\font-awesome\less\core.less" />
+    <None Include="Ascencion _Studios_Demo\vendor\font-awesome\less\fixed-width.less" />
+    <None Include="Ascencion _Studios_Demo\vendor\font-awesome\less\font-awesome.less" />
+    <None Include="Ascencion _Studios_Demo\vendor\font-awesome\less\icons.less" />
+    <None Include="Ascencion _Studios_Demo\vendor\font-awesome\less\larger.less" />
+    <None Include="Ascencion _Studios_Demo\vendor\font-awesome\less\list.less" />
+    <None Include="Ascencion _Studios_Demo\vendor\font-awesome\less\mixins.less" />
+    <None Include="Ascencion _Studios_Demo\vendor\font-awesome\less\path.less" />
+    <None Include="Ascencion _Studios_Demo\vendor\font-awesome\less\rotated-flipped.less" />
+    <None Include="Ascencion _Studios_Demo\vendor\font-awesome\less\screen-reader.less" />
+    <None Include="Ascencion _Studios_Demo\vendor\font-awesome\less\stacked.less" />
+    <None Include="Ascencion _Studios_Demo\vendor\font-awesome\less\variables.less" />
+    <None Include="Ascencion _Studios_Demo\vendor\font-awesome\scss\font-awesome.scss" />
+    <None Include="Ascencion _Studios_Demo\vendor\font-awesome\scss\_animated.scss" />
+    <None Include="Ascencion _Studios_Demo\vendor\font-awesome\scss\_bordered-pulled.scss" />
+    <None Include="Ascencion _Studios_Demo\vendor\font-awesome\scss\_core.scss" />
+    <None Include="Ascencion _Studios_Demo\vendor\font-awesome\scss\_fixed-width.scss" />
+    <None Include="Ascencion _Studios_Demo\vendor\font-awesome\scss\_icons.scss" />
+    <None Include="Ascencion _Studios_Demo\vendor\font-awesome\scss\_larger.scss" />
+    <None Include="Ascencion _Studios_Demo\vendor\font-awesome\scss\_list.scss" />
+    <None Include="Ascencion _Studios_Demo\vendor\font-awesome\scss\_mixins.scss" />
+    <None Include="Ascencion _Studios_Demo\vendor\font-awesome\scss\_path.scss" />
+    <None Include="Ascencion _Studios_Demo\vendor\font-awesome\scss\_rotated-flipped.scss" />
+    <None Include="Ascencion _Studios_Demo\vendor\font-awesome\scss\_screen-reader.scss" />
+    <None Include="Ascencion _Studios_Demo\vendor\font-awesome\scss\_stacked.scss" />
+    <None Include="Ascencion _Studios_Demo\vendor\font-awesome\scss\_variables.scss" />
+    <None Include="Ascencion _Studios_Demo\vendor\jquery\jquery.min.map" />
+    <None Include="Ascencion _Studios_Demo\vendor\jquery\jquery.slim.min.map" />
+    <None Include="Ascencion _Studios_Demo\vendor\slick\config.rb" />
+    <None Include="Ascencion _Studios_Demo\vendor\slick\fonts\slick.eot" />
+    <None Include="Ascencion _Studios_Demo\vendor\slick\fonts\slick.ttf" />
+    <None Include="Ascencion _Studios_Demo\vendor\slick\fonts\slick.woff" />
+    <None Include="Ascencion _Studios_Demo\vendor\slick\slick-theme.less" />
+    <None Include="Ascencion _Studios_Demo\vendor\slick\slick-theme.scss" />
+    <None Include="Ascencion _Studios_Demo\vendor\slick\slick.less" />
+    <None Include="Ascencion _Studios_Demo\vendor\slick\slick.scss" />
+    <None Include="Ascencion _Studios_Demo\Web.config" />
+    <None Include="Ascencion _Studios_Demo\Web.Debug.config" />
+    <None Include="Ascencion _Studios_Demo\Web.Release.config" />
+    <None Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" />
+    <None Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\content\net45\web.config.install.xdt" />
+    <None Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\content\net45\web.config.uninstall.xdt" />
+    <None Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\content\net46\web.config.install.xdt" />
+    <None Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\content\net46\web.config.uninstall.xdt" />
+    <None Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8.nupkg" />
+    <None Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\tools\net45\install.ps1" />
+    <None Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\tools\net45\uninstall.ps1" />
+    <None Include="packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props" />
+    <None Include="packages\Microsoft.Net.Compilers.2.6.1\Microsoft.Net.Compilers.2.6.1.nupkg" />
+    <None Include="packages\Microsoft.Net.Compilers.2.6.1\ThirdPartyNotices.rtf" />
+    <None Include="packages\Microsoft.Net.Compilers.2.6.1\tools\csc.exe.config" />
+    <None Include="packages\Microsoft.Net.Compilers.2.6.1\tools\csc.rsp" />
+    <None Include="packages\Microsoft.Net.Compilers.2.6.1\tools\csi.exe.config" />
+    <None Include="packages\Microsoft.Net.Compilers.2.6.1\tools\csi.rsp" />
+    <None Include="packages\Microsoft.Net.Compilers.2.6.1\tools\Microsoft.CSharp.Core.targets" />
+    <None Include="packages\Microsoft.Net.Compilers.2.6.1\tools\Microsoft.VisualBasic.Core.targets" />
+    <None Include="packages\Microsoft.Net.Compilers.2.6.1\tools\vbc.exe.config" />
+    <None Include="packages\Microsoft.Net.Compilers.2.6.1\tools\vbc.rsp" />
+    <None Include="packages\Microsoft.Net.Compilers.2.6.1\tools\VBCSCompiler.exe.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".git\ms-persist.xml" />
+    <Content Include="Ascencion _Studios_Demo\Ascencion _Studios_Demo.csproj" />
+    <Content Include="Ascencion _Studios_Demo\Ascencion _Studios_Demo.csproj.user" />
+    <Content Include="Ascencion _Studios_Demo\AuctionHouse.aspx" />
+    <Content Include="Ascencion _Studios_Demo\Bid.aspx" />
+    <Content Include="Ascencion _Studios_Demo\bin\Ascencion _Studios_Demo.dll" />
+    <Content Include="Ascencion _Studios_Demo\bin\Ascencion _Studios_Demo.pdb" />
+    <Content Include="Ascencion _Studios_Demo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="Ascencion _Studios_Demo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="Ascencion _Studios_Demo\bin\roslyn\csc.exe" />
+    <Content Include="Ascencion _Studios_Demo\bin\roslyn\csi.exe" />
+    <Content Include="Ascencion _Studios_Demo\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="Ascencion _Studios_Demo\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="Ascencion _Studios_Demo\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="Ascencion _Studios_Demo\bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="Ascencion _Studios_Demo\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="Ascencion _Studios_Demo\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="Ascencion _Studios_Demo\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="Ascencion _Studios_Demo\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="Ascencion _Studios_Demo\bin\roslyn\Microsoft.Win32.Primitives.dll" />
+    <Content Include="Ascencion _Studios_Demo\bin\roslyn\System.AppContext.dll" />
+    <Content Include="Ascencion _Studios_Demo\bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="Ascencion _Studios_Demo\bin\roslyn\System.Console.dll" />
+    <Content Include="Ascencion _Studios_Demo\bin\roslyn\System.Diagnostics.FileVersionInfo.dll" />
+    <Content Include="Ascencion _Studios_Demo\bin\roslyn\System.Diagnostics.Process.dll" />
+    <Content Include="Ascencion _Studios_Demo\bin\roslyn\System.Diagnostics.StackTrace.dll" />
+    <Content Include="Ascencion _Studios_Demo\bin\roslyn\System.IO.Compression.dll" />
+    <Content Include="Ascencion _Studios_Demo\bin\roslyn\System.IO.FileSystem.dll" />
+    <Content Include="Ascencion _Studios_Demo\bin\roslyn\System.IO.FileSystem.DriveInfo.dll" />
+    <Content Include="Ascencion _Studios_Demo\bin\roslyn\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="Ascencion _Studios_Demo\bin\roslyn\System.IO.Pipes.dll" />
+    <Content Include="Ascencion _Studios_Demo\bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="Ascencion _Studios_Demo\bin\roslyn\System.Security.AccessControl.dll" />
+    <Content Include="Ascencion _Studios_Demo\bin\roslyn\System.Security.Claims.dll" />
+    <Content Include="Ascencion _Studios_Demo\bin\roslyn\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="Ascencion _Studios_Demo\bin\roslyn\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="Ascencion _Studios_Demo\bin\roslyn\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="Ascencion _Studios_Demo\bin\roslyn\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="Ascencion _Studios_Demo\bin\roslyn\System.Security.Principal.Windows.dll" />
+    <Content Include="Ascencion _Studios_Demo\bin\roslyn\System.Text.Encoding.CodePages.dll" />
+    <Content Include="Ascencion _Studios_Demo\bin\roslyn\System.Threading.Thread.dll" />
+    <Content Include="Ascencion _Studios_Demo\bin\roslyn\System.ValueTuple.dll" />
+    <Content Include="Ascencion _Studios_Demo\bin\roslyn\System.Xml.ReaderWriter.dll" />
+    <Content Include="Ascencion _Studios_Demo\bin\roslyn\System.Xml.XmlDocument.dll" />
+    <Content Include="Ascencion _Studios_Demo\bin\roslyn\System.Xml.XPath.dll" />
+    <Content Include="Ascencion _Studios_Demo\bin\roslyn\System.Xml.XPath.XDocument.dll" />
+    <Content Include="Ascencion _Studios_Demo\bin\roslyn\vbc.exe" />
+    <Content Include="Ascencion _Studios_Demo\bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="Ascencion _Studios_Demo\Contact.aspx" />
+    <Content Include="Ascencion _Studios_Demo\css\Bid.css" />
+    <Content Include="Ascencion _Studios_Demo\css\Chatroom.css" />
+    <Content Include="Ascencion _Studios_Demo\css\Countdown.css" />
+    <Content Include="Ascencion _Studios_Demo\css\creative.css" />
+    <Content Include="Ascencion _Studios_Demo\css\creative.min.css" />
+    <Content Include="Ascencion _Studios_Demo\css\creative1.css" />
+    <Content Include="Ascencion _Studios_Demo\css\creative1.min.css" />
+    <Content Include="Ascencion _Studios_Demo\css\creative2.css" />
+    <Content Include="Ascencion _Studios_Demo\css\creative2.min.css" />
+    <Content Include="Ascencion _Studios_Demo\css\creativeB.css" />
+    <Content Include="Ascencion _Studios_Demo\css\creativeB.min.css" />
+    <Content Include="Ascencion _Studios_Demo\css\freelancer.css" />
+    <Content Include="Ascencion _Studios_Demo\css\freelancer.min.css" />
+    <Content Include="Ascencion _Studios_Demo\css\main.css" />
+    <Content Include="Ascencion _Studios_Demo\css\util.css" />
+    <Content Include="Ascencion _Studios_Demo\fonts\iconic\css\material-design-iconic-font.css" />
+    <Content Include="Ascencion _Studios_Demo\fonts\iconic\css\material-design-iconic-font.min.css" />
+    <Content Include="Ascencion _Studios_Demo\fonts\iconic\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="Ascencion _Studios_Demo\Home.aspx" />
+    <Content Include="Ascencion _Studios_Demo\images\about-01.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\about-02.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\avatar-01.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\banner-01.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\banner-02.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\banner-03.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\banner-04.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\banner-05.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\banner-06.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\banner-07.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\banner-08.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\banner-09.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\bg-01.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\bg-02.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\blog-01.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\blog-02.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\blog-03.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\blog-04.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\blog-05.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\blog-06.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\gallery-01.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\gallery-02.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\gallery-03.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\gallery-04.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\gallery-05.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\gallery-06.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\gallery-07.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\gallery-08.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\gallery-09.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\icons\favicon.png" />
+    <Content Include="Ascencion _Studios_Demo\images\icons\icon-close.png" />
+    <Content Include="Ascencion _Studios_Demo\images\icons\icon-close2.png" />
+    <Content Include="Ascencion _Studios_Demo\images\icons\icon-email.png" />
+    <Content Include="Ascencion _Studios_Demo\images\icons\icon-heart-01.png" />
+    <Content Include="Ascencion _Studios_Demo\images\icons\icon-heart-02.png" />
+    <Content Include="Ascencion _Studios_Demo\images\icons\icon-next.png" />
+    <Content Include="Ascencion _Studios_Demo\images\icons\icon-pay-01.png" />
+    <Content Include="Ascencion _Studios_Demo\images\icons\icon-pay-02.png" />
+    <Content Include="Ascencion _Studios_Demo\images\icons\icon-pay-03.png" />
+    <Content Include="Ascencion _Studios_Demo\images\icons\icon-pay-04.png" />
+    <Content Include="Ascencion _Studios_Demo\images\icons\icon-pay-05.png" />
+    <Content Include="Ascencion _Studios_Demo\images\icons\icon-prev.png" />
+    <Content Include="Ascencion _Studios_Demo\images\icons\logo-01.png" />
+    <Content Include="Ascencion _Studios_Demo\images\icons\logo-02.png" />
+    <Content Include="Ascencion _Studios_Demo\images\icons\pin.png" />
+    <Content Include="Ascencion _Studios_Demo\images\item-cart-01.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\item-cart-02.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\item-cart-03.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\item-cart-04.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\item-cart-05.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\product-01.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\product-02.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\product-03.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\product-04.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\product-05.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\product-06.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\product-07.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\product-08.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\product-09.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\product-10.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\product-11.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\product-12.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\product-13.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\product-14.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\product-15.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\product-16.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\product-detail-01.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\product-detail-02.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\product-detail-03.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\product-min-01.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\product-min-02.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\product-min-03.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\slide-01.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\slide-02.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\slide-03.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\slide-04.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\slide-05.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\slide-06.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\slide-07.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\thumb-01.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\thumb-02.jpg" />
+    <Content Include="Ascencion _Studios_Demo\images\thumb-03.jpg" />
+    <Content Include="Ascencion _Studios_Demo\Img\A.jpg" />
+    <Content Include="Ascencion _Studios_Demo\Img\A2.jpg" />
+    <Content Include="Ascencion _Studios_Demo\Img\A3.jpg" />
+    <Content Include="Ascencion _Studios_Demo\Img\A4.jpg" />
+    <Content Include="Ascencion _Studios_Demo\Img\A5.jpg" />
+    <Content Include="Ascencion _Studios_Demo\Img\ASB.png" />
+    <Content Include="Ascencion _Studios_Demo\Img\ASW .png" />
+    <Content Include="Ascencion _Studios_Demo\Img\L.jpg" />
+    <Content Include="Ascencion _Studios_Demo\Img\M.jpg" />
+    <Content Include="Ascencion _Studios_Demo\Img\N.jpg" />
+    <Content Include="Ascencion _Studios_Demo\Img\portfolio\fullsize\1.jpg" />
+    <Content Include="Ascencion _Studios_Demo\Img\portfolio\fullsize\2.jpg" />
+    <Content Include="Ascencion _Studios_Demo\Img\portfolio\fullsize\3.jpg" />
+    <Content Include="Ascencion _Studios_Demo\Img\portfolio\fullsize\4.jpg" />
+    <Content Include="Ascencion _Studios_Demo\Img\portfolio\fullsize\5.jpg" />
+    <Content Include="Ascencion _Studios_Demo\Img\portfolio\fullsize\6.jpg" />
+    <Content Include="Ascencion _Studios_Demo\Img\portfolio\thumbnails\1.jpg" />
+    <Content Include="Ascencion _Studios_Demo\Img\portfolio\thumbnails\2.jpg" />
+    <Content Include="Ascencion _Studios_Demo\Img\portfolio\thumbnails\3.jpg" />
+    <Content Include="Ascencion _Studios_Demo\Img\portfolio\thumbnails\4.jpg" />
+    <Content Include="Ascencion _Studios_Demo\Img\portfolio\thumbnails\5.jpg" />
+    <Content Include="Ascencion _Studios_Demo\Img\portfolio\thumbnails\6.jpg" />
+    <Content Include="Ascencion _Studios_Demo\Img\V.jpg" />
+    <Content Include="Ascencion _Studios_Demo\js\contact_me.js" />
+    <Content Include="Ascencion _Studios_Demo\js\contact_me.min.js" />
+    <Content Include="Ascencion _Studios_Demo\js\Countdown.js" />
+    <Content Include="Ascencion _Studios_Demo\js\creative.js" />
+    <Content Include="Ascencion _Studios_Demo\js\creative.min.js" />
+    <Content Include="Ascencion _Studios_Demo\js\freelancer.js" />
+    <Content Include="Ascencion _Studios_Demo\js\freelancer.min.js" />
+    <Content Include="Ascencion _Studios_Demo\js\jqBootstrapValidation.js" />
+    <Content Include="Ascencion _Studios_Demo\js\jqBootstrapValidation.min.js" />
+    <Content Include="Ascencion _Studios_Demo\js\main.js" />
+    <Content Include="Ascencion _Studios_Demo\js\slick-custom.js" />
+    <Content Include="Ascencion _Studios_Demo\Login.aspx" />
+    <Content Include="Ascencion _Studios_Demo\obj\Debug\Ascencion _Studios_Demo.csproj.FileListAbsolute.txt" />
+    <Content Include="Ascencion _Studios_Demo\obj\Debug\Ascencion _Studios_Demo.dll" />
+    <Content Include="Ascencion _Studios_Demo\obj\Debug\Ascencion _Studios_Demo.pdb" />
+    <Content Include="Ascencion _Studios_Demo\ProdDetails.aspx" />
+    <Content Include="Ascencion _Studios_Demo\Registration.aspx" />
+    <Content Include="Ascencion _Studios_Demo\Signin.aspx" />
+    <Content Include="Ascencion _Studios_Demo\UserProfile.aspx" />
+    <Content Include="Ascencion _Studios_Demo\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Ascencion _Studios_Demo\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Ascencion _Studios_Demo\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Ascencion _Studios_Demo\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Ascencion _Studios_Demo\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Ascencion _Studios_Demo\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Ascencion _Studios_Demo\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Ascencion _Studios_Demo\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Ascencion _Studios_Demo\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Ascencion _Studios_Demo\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Ascencion _Studios_Demo\vendor\font-awesome\css\font-awesome.css" />
+    <Content Include="Ascencion _Studios_Demo\vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Ascencion _Studios_Demo\vendor\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Ascencion _Studios_Demo\vendor\isotope\isotope.pkgd.min.js" />
+    <Content Include="Ascencion _Studios_Demo\vendor\jquery-easing\jquery.easing.compatibility.js" />
+    <Content Include="Ascencion _Studios_Demo\vendor\jquery-easing\jquery.easing.js" />
+    <Content Include="Ascencion _Studios_Demo\vendor\jquery-easing\jquery.easing.min.js" />
+    <Content Include="Ascencion _Studios_Demo\vendor\jquery\jquery.js" />
+    <Content Include="Ascencion _Studios_Demo\vendor\jquery\jquery.min.js" />
+    <Content Include="Ascencion _Studios_Demo\vendor\jquery\jquery.slim.js" />
+    <Content Include="Ascencion _Studios_Demo\vendor\jquery\jquery.slim.min.js" />
+    <Content Include="Ascencion _Studios_Demo\vendor\magnific-popup\jquery.magnific-popup.js" />
+    <Content Include="Ascencion _Studios_Demo\vendor\magnific-popup\jquery.magnific-popup.min.js" />
+    <Content Include="Ascencion _Studios_Demo\vendor\magnific-popup\magnific-popup.css" />
+    <Content Include="Ascencion _Studios_Demo\vendor\scrollreveal\scrollreveal.js" />
+    <Content Include="Ascencion _Studios_Demo\vendor\scrollreveal\scrollreveal.min.js" />
+    <Content Include="Ascencion _Studios_Demo\vendor\select2\select2.css" />
+    <Content Include="Ascencion _Studios_Demo\vendor\select2\select2.js" />
+    <Content Include="Ascencion _Studios_Demo\vendor\select2\select2.min.css" />
+    <Content Include="Ascencion _Studios_Demo\vendor\select2\select2.min.js" />
+    <Content Include="Ascencion _Studios_Demo\vendor\slick\ajax-loader.gif" />
+    <Content Include="Ascencion _Studios_Demo\vendor\slick\fonts\slick.svg" />
+    <Content Include="Ascencion _Studios_Demo\vendor\slick\slick-theme.css" />
+    <Content Include="Ascencion _Studios_Demo\vendor\slick\slick.css" />
+    <Content Include="Ascencion _Studios_Demo\vendor\slick\slick.js" />
+    <Content Include="Ascencion _Studios_Demo\vendor\slick\slick.min.js" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.6.1\tools\csc.exe" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.6.1\tools\csi.exe" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.6.1\tools\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.6.1\tools\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.6.1\tools\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.6.1\tools\Microsoft.CodeAnalysis.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.6.1\tools\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.6.1\tools\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.6.1\tools\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.6.1\tools\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.6.1\tools\Microsoft.Win32.Primitives.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.6.1\tools\System.AppContext.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.6.1\tools\System.Collections.Immutable.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.6.1\tools\System.Console.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.6.1\tools\System.Diagnostics.FileVersionInfo.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.6.1\tools\System.Diagnostics.Process.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.6.1\tools\System.Diagnostics.StackTrace.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.6.1\tools\System.IO.Compression.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.6.1\tools\System.IO.FileSystem.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.6.1\tools\System.IO.FileSystem.DriveInfo.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.6.1\tools\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.6.1\tools\System.IO.Pipes.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.6.1\tools\System.Reflection.Metadata.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.6.1\tools\System.Security.AccessControl.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.6.1\tools\System.Security.Claims.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.6.1\tools\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.6.1\tools\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.6.1\tools\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.6.1\tools\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.6.1\tools\System.Security.Principal.Windows.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.6.1\tools\System.Text.Encoding.CodePages.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.6.1\tools\System.Threading.Thread.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.6.1\tools\System.ValueTuple.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.6.1\tools\System.Xml.ReaderWriter.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.6.1\tools\System.Xml.XmlDocument.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.6.1\tools\System.Xml.XPath.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.6.1\tools\System.Xml.XPath.XDocument.dll" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.6.1\tools\vbc.exe" />
+    <Content Include="packages\Microsoft.Net.Compilers.2.6.1\tools\VBCSCompiler.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ascencion _Studios_Demo\AuctionHouse.aspx.cs">
+      <DependentUpon>AuctionHouse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ascencion _Studios_Demo\AuctionHouse.aspx.designer.cs">
+      <DependentUpon>AuctionHouse.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ascencion _Studios_Demo\Bid.aspx.cs">
+      <DependentUpon>Bid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ascencion _Studios_Demo\Bid.aspx.designer.cs">
+      <DependentUpon>Bid.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ascencion _Studios_Demo\Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ascencion _Studios_Demo\Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ascencion _Studios_Demo\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ascencion _Studios_Demo\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ascencion _Studios_Demo\login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ascencion _Studios_Demo\login.aspx.designer.cs">
+      <DependentUpon>login.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ascencion _Studios_Demo\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="Ascencion _Studios_Demo\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="Ascencion _Studios_Demo\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Ascencion _Studios_Demo\ProdDetails.aspx.cs">
+      <DependentUpon>ProdDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ascencion _Studios_Demo\ProdDetails.aspx.designer.cs">
+      <DependentUpon>ProdDetails.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ascencion _Studios_Demo\Properties\AssemblyInfo.cs" />
+    <Compile Include="Ascencion _Studios_Demo\Registration.aspx.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ascencion _Studios_Demo\Registration.aspx.designer.cs">
+      <DependentUpon>Registration.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ascencion _Studios_Demo\Signin.aspx.cs">
+      <DependentUpon>Signin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ascencion _Studios_Demo\Signin.aspx.designer.cs">
+      <DependentUpon>Signin.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ascencion _Studios_Demo\UserProfile.aspx.cs">
+      <DependentUpon>UserProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ascencion _Studios_Demo\UserProfile.aspx.designer.cs">
+      <DependentUpon>UserProfile.aspx.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".git\objects\info\" />
+    <Folder Include=".git\objects\pack\" />
+    <Folder Include=".git\refs\tags\" />
+    <Folder Include=".vs\Ascencion_Demo\v15\" />
+    <Folder Include="Ascencion _Studios_Demo\obj\Debug\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>
